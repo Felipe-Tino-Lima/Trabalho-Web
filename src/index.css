@@ -1,0 +1,89 @@
+/* styles.css */
+
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(197, 188, 188);
+  color: #333;
+  text-align: center;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 10px;
+}
+
+/* Grid Layout */
+.container {
+  display: grid;
+  grid-template-areas:
+    "Feed Feed"
+    "UserProfile UserProfile"
+    "Form Form"
+    "Footer Footer";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+/* Feed de Posts */
+.post, .user-profile {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post h3, .user-profile h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.post p, .user-profile p {
+  color: #666;
+}
+
+/* Formulário de Post */
+form {
+  grid-area: Form;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+  grid-area: Footer;
+}
