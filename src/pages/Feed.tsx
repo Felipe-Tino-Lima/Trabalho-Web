@@ -15,7 +15,7 @@ const Feed: React.FC = () => {
 }
 
   return (
-    <div> <button type="button" onClick={ refreshPage }> <span>Reload</span> </button>
+    <div> <button type="button" onClick={ refreshPage }> <span>⇆</span> </button>
       <h1>Feed de Posts</h1> 
       <Link to="/login">Login</Link><br></br>
       <Link to="/profile">Acessar Meu Perfil</Link>
