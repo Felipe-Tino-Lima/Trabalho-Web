@@ -10,18 +10,22 @@ const Feed: React.FC = () => {
   const handlePostSubmit = (content: string) => {
     setPosts([content, ...posts]);
   };
+  function refreshPage(){ 
+    window.location.reload(); 
+}
 
   return (
-    <div>
-      <h1>Feed de Posts</h1>
+    <div> <button type="button" onClick={ refreshPage }> <span>Reload</span> </button>
+      <h1>Feed de Posts</h1> 
       <Link to="/login">Login</Link><br></br>
       <Link to="/profile">Acessar Meu Perfil</Link>
       <PostForm onSubmit={handlePostSubmit} />
       {posts.map((post, index) => (
         <Post key={index} username="Usuario 01" content={post} />
       ))}
+      
     </div>
   );
+  
 };
-
 export default Feed;
